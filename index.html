@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/icon.png" alt="">
+            <p>lmr-survey</p>
+        </div>
+        <div class="go-button color-1">
+            <a href="create_survey.html">Создать опрос</a>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="search">
+            <div class="block_count" id="">
+                <p id="bc"></p>
+                <script>
+                    let data = "Количество опросов: " + cnt;
+                    document.getElementById("bc").textContent = data;                 // ТУТ КОЛИЧЕСТВО ОПРОСОВ 
+                </script>                                                
+            </div>
+            
+            <select id="sort-by">
+                <option value="name">Сначала популярные</option>
+                <option value="price">Самые короткие</option>
+                <option value="date">Сначала новые</option>
+            </select>
+            
+        </div>
+
+    
+        <p id="demo"></p>  <!-- разрешает обрабатывать запросы в цикле снизу -->
+
+        <div class="surveys">                             
+        <script>
+            let count = cnt;
+            for (let i = 0; i < count; i += 1) {
+                const list_surveys = result.surveys[i]
+                console.log(list_surveys, typeof(list_surveys))
+                const obj = JSON.parse(JSON.stringify(list_surveys))
+                console.log(obj)
+                document.getElementById("demo").innerHTML = obj.title
+
+                const newDiv = document.createElement("div");
+                newDiv.classList.add("surv");
+
+                const newSpan1 = document.createElement("span");
+                const newSpan2 = document.createElement("span");
+                const newA = document.createElement("a");
+                    
+                newSpan1.classList.add("surv-info-title");
+                newSpan2.classList.add("surv-info-topic");
+                newA.classList.add("start-button");
+
+                newSpan1.textContent = obj.title;
+                newSpan2.textContent = obj.topic;
+                newA.textContent = "Start";
+                newA.href = "https://example.com";
+
+
+
+                const surveysElement = document.querySelector(".surveys");
+                surveysElement.appendChild(newDiv);
+
+                newDiv.appendChild(newSpan1);
+                newDiv.appendChild(newSpan2);
+                newDiv.appendChild(newA);
+                } 
+                    
+                    // ты куда все дел
+                    // Я ничего не жал 
+                    // я только в 64 строке точку добавил, а если что, то 64 строка была на 66 строке изначально
+                    // верни класс <>
+                    // там класс 
+                    //
+                    //
+                    //
+                    //
+
+            </script>
+        </div>
+    </main>
+</body>
+</html>

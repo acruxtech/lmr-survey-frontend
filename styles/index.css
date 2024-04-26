@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: #229091;
+}
+
+header {
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #242424;
+    opacity: 1;
+}   
+
+.logo {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    height: 100%;
+}
+
+header p {
+    color: #C8E9FF;
+    font-family: "Noto Sans";
+    font-size: 300%;
+}
+
+header img {
+    height: 50%;
+    padding-right: 20px;
+}
+
+.go-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 15px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+
+.go-button a {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #C8E9FF;
+    vertical-align: center;
+}
+  
+  .go-button:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+.go-button:focus {
+    outline: none;
+}
+  
+.go-button.color-1 {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+.go-button.color-2 {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+.go-button.color-3 {
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+.go-button.color-4 {
+    background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+.go-button.color-5 {
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+.go-button.color-6 {
+    background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+.go-button.color-7 {
+    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+.go-button.color-8 {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+.go-button.color-9 {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+.go-button.color-10 {
+        background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+.go-button.color-11 {
+       background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
+
+
+.start-button {
+    border-radius: 20px;
+    --c:  #229091;
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+    font-family: system-ui, sans-serif;
+    font-size: 3.5rem;
+    cursor: pointer;
+    padding: .1em .6em;
+    font-weight: bold;  
+    border: none;
+    text-decoration: none;
+    color: #C8E9FF;
+    text-transform: capitalize;
+}
+
+.start-button a {
+    font-size: 10px;
+}
+
+.start-button:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+}
+
+.start-button:active {
+    box-shadow: 0 0 9e9q inset #0009; 
+    background-color: var(--c);
+    color: #C8E9FF;
+}
+
+.surv a{
+    font-size: 200%;
+    font-family: "Noto Sans";
+    top: -220px;
+}
+
+main {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+    padding: 0 10%;
+    display: flex;
+    width: 100vw;
+    background-color: #229091;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+
+.block_count{
+    font-size: 200%;
+    font-family: "Noto Sans";
+}
+
+.surveys{
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.surv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    background: #17181c;
+    border-radius: 18px;
+    color: #eee;
+    font-size: 24px;
+}
+
+.surv-info-title{
+    color: #C8E9FF;
+    font-family: "Noto Sans";
+}
+
+.surv-info-title::first-letter{
+    text-transform: uppercase;
+}
+
+.surv-info-topic{
+    color: #C8E9FF;
+    font-family: "Noto Sans";
+}
+
+.surv-info-topic::first-letter{
+    text-transform: uppercase;
+}

@@ -1,0 +1,11 @@
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+
+.new-survey {
+    display: flex;
+    flex-direction: column;
+}
+
