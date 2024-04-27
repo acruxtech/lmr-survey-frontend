@@ -65,6 +65,7 @@ main {
 
 
 .go-button {
+    
     background-color: var(--main-text);
     border: 1px solid var(--main-text);
     border-radius: 15px;
@@ -72,12 +73,13 @@ main {
     box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
     color: black;
     cursor: pointer;
-    font-size: 150%;
+    font-size: 120%;
     outline: none;
     outline: 0;
     padding: 15px 40px;
     text-align: center;
     vertical-align: middle;
+    text-wrap: nowrap;
     transition: transform 150ms, box-shadow 150ms;
     user-select: none;
     -webkit-user-select: none;
@@ -91,12 +93,18 @@ main {
 }
 
 
-.uuid-form {
+#get-by-uuid {
     display: flex;
     margin: 0 10px;
     padding: 10px;
     width: 50%;
+    
 }
+
+/* #get-by-uuid:hover {
+    box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+    transform: translateY(-2px);
+} */
 
 
 .white {
