@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-body{
+
+
+body {
     background-color: #229091;
 }
+
 
 header {
     top: 0;
@@ -17,6 +20,7 @@ header {
     opacity: 1;
 }   
 
+
 .logo {
     display: flex;
     flex-direction: row;    
@@ -24,97 +28,145 @@ header {
     height: 100%;
 }
 
+
 header p {
     color: #C8E9FF;
     font-family: "Noto Sans";
     font-size: 300%;
 }
 
+
 header img {
     height: 50%;
     padding-right: 20px;
 }
 
+
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+    padding: 0 10%;
+    width: 100vw;
+    background-color: #229091;
+}
+
+
 .go-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    cursor: pointer;
-    margin: 20px;
+    margin-left: 25px;
+    width: 225px;
     height: 55px;
+    cursor: pointer;
     text-align: center;
     border: none;
-    background-size: 300% 100%;
     border-radius: 15px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
+    background-size: 300% 100%;
     transition: all .4s ease-in-out;
-  }
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
 
 .go-button a {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     text-decoration: none;
     color: #C8E9FF;
     vertical-align: center;
 }
-  
-  .go-button:hover {
+ 
+
+.go-button:hover {
     background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-  }
-  
+}
+
+
 .go-button:focus {
     outline: none;
 }
-  
-.go-button.color-1 {
-    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
-    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+
+
+.white {
+    background-image: linear-gradient(to right, #c1ecff, #8e8e8e, #8d8d8d, #171717);
+    box-shadow: 0 4px 15px 0 rgba(234, 255, 254, 0.75);
 }
-.go-button.color-2 {
-    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
-    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+
+
+.white a {
+    color: black;
 }
-.go-button.color-3 {
-    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
-    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+
+
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
 }
-.go-button.color-4 {
-    background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
-    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+
+
+.block_count{
+    font-size: 200%;
+    font-family: "Noto Sans";
 }
-.go-button.color-5 {
-    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
-    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+
+
+.surveys{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 6.6%;    
 }
-.go-button.color-6 {
-    background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
-    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+
+
+.surv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding: 25px;
+    width: 20%;
+    height: 400px;
+    text-align: left;
+    background: #17181c;
+    border-radius: 18px;
+    color: #eee;
+    font-size: 24px;
+    margin-bottom: 50px;
 }
-.go-button.color-7 {
-    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
-    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+
+
+.surv-info {
+    display: flex;
+    flex-direction: column;
 }
-.go-button.color-8 {
-    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
-    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+
+
+.surv-info-item{
+    color: #C8E9FF;
+    font-family: "Noto Sans";
+    margin-bottom: 25px;
 }
-.go-button.color-9 {
-    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
-}
-.go-button.color-10 {
-        background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
-    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
-}
-.go-button.color-11 {
-       background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+
+
+.surv-info-topic{
+    color: #949494;
+    font-family: "Noto Sans";
 }
 
 
@@ -133,18 +185,24 @@ header img {
     outline-offset: .1em;
     transition: background-size .4s, background-position 0s .4s;
     font-family: system-ui, sans-serif;
-    font-size: 3.5rem;
     cursor: pointer;
     padding: .1em .6em;
+    width: 100%;
+    height: 20%;
     font-weight: bold;  
     border: none;
     text-decoration: none;
     color: #C8E9FF;
-    text-transform: capitalize;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .start-button a {
     font-size: 10px;
+    line-height: 1em;
+    font-family: "Noto Sans";
 }
 
 .start-button:hover {
@@ -158,78 +216,17 @@ header img {
     color: #C8E9FF;
 }
 
-.surv a{
-    font-size: 200%;
-    font-family: "Noto Sans";
-    top: -220px;
-}
 
-main {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 150px;
-    padding: 0 10%;
-    display: flex;
-    width: 100vw;
-    background-color: #229091;
-}
-
-.search{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+footer {
     width: 100%;
-    margin-bottom: 50px;
-}
-
-
-.block_count{
-    font-size: 200%;
-    font-family: "Noto Sans";
-}
-
-.surveys{
+    height: 100px;
     display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
-    
+    justify-content: center;
+    background-color: #242424;
 }
 
-.surv{
-    margin-left: 10px;
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 30px;
-    width: 20%;
-    height: 400px;
-    text-align: center;
-    background: #17181c;
-    border-radius: 18px;
-    color: #eee;
-    font-size: 24px;
-}
-
-.surv-info-title{
-    color: #C8E9FF;
+footer p {
+    color: rgba(161, 161, 161, 0.75);
     font-family: "Noto Sans";
-}
-
-.surv-info-title::first-letter{
-    text-transform: uppercase;
-}
-
-.surv-info-topic{
-    color: #C8E9FF;
-    font-family: "Noto Sans";
-}
-
-.surv-info-topic::first-letter{
-    text-transform: uppercase;
 }

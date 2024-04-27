@@ -5,25 +5,28 @@
     <meta name="viewport" content="width=div, initial-scale=1.0">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/index.css">
-    <script src="scripts/index.js"></script>
     <title>Document</title>
+    <script src="scripts/index.js"></script>
 </head>
 <body>
-
     <header>
         <div class="logo">
             <img src="assets/icon.png" alt="">
             <p>lmr-survey</p>
         </div>
-        <div class="go-button color-1">
-            <a href="create_survey.html">Создать опрос</a>
+        <div class="header-buttons">
+            <div class="go-button white">
+                <a href="create_survey.html">Создать опрос</a>
+            </div>
+            <div class="go-button">
+                <a href="create_survey.html">Пройти по uuid</a>
+            </div>
         </div>
     </header>
 
-
     <main>
         <div class="search">
-            <div class="block_count" id="">
+            <div class="block_count">
                 <p id="bc"></p>
                 <script>
                     let data = "Количество опросов: " + cnt;
@@ -36,56 +39,49 @@
                 <option value="price">Самые короткие</option>
                 <option value="date">Сначала новые</option>
             </select>
-            
         </div>
 
-        <div class="surveys">                             
-        <script>
-            let count = cnt;
-            for (let i = 0; i < count; i += 1) {
-                const list_surveys = result.surveys[i] // СБОР ДАННЫХ с i-го опроса 
-                const obj = JSON.parse(JSON.stringify(list_surveys))
+        <div class="surveys">    
+            <script>
+                let count = cnt;
+                for (let i = 0; i < count; i += 1) {
+                    const list_surveys = result.surveys[i] // СБОР ДАННЫХ с i-го опроса 
+                    const obj = JSON.parse(JSON.stringify(list_surveys))
 
+                    const newDiv = document.createElement("div");
+                    newDiv.classList.add("surv");
 
-                const newDiv = document.createElement("div");
-                newDiv.classList.add("surv");
+                    const surv_info = document.createElement("div")
+                    surv_info.classList.add("surv-info")
 
-                const newSpan1 = document.createElement("span");
-                const newSpan2 = document.createElement("span");
-                const newA = document.createElement("a");
-                    
-                newSpan1.classList.add("surv-info-title");
-                newSpan2.classList.add("surv-info-topic");
-                newA.classList.add("start-button");
+                    const newSpan1 = document.createElement("span");
+                    const newSpan2 = document.createElement("span");
+                    const newA = document.createElement("a");
+                        
+                    newSpan1.classList.add("surv-info-item");
+                    newSpan2.classList.add("surv-info-item");
+                    newSpan2.classList.add("surv-info-topic");
+                    newA.classList.add("start-button");
 
-                newSpan1.textContent = obj.title;
-                newSpan2.textContent = obj.topic;
-                newA.textContent = "Start";
-                newA.href = "create_survey.html";
+                    newSpan1.textContent = obj.title;
+                    newSpan2.textContent = obj.topic;
+                    newA.textContent = "Пройти";
+                    newA.href = "create_survey.html";
 
+                    const surveysElement = document.querySelector(".surveys");
+                    surveysElement.appendChild(newDiv);
 
-
-                const surveysElement = document.querySelector(".surveys");
-                surveysElement.appendChild(newDiv);
-
-                newDiv.appendChild(newSpan1);
-                newDiv.appendChild(newSpan2);
-                newDiv.appendChild(newA);
+                    surv_info.appendChild(newSpan1);
+                    surv_info.appendChild(newSpan2);
+                    newDiv.appendChild(surv_info);
+                    newDiv.appendChild(newA);
                 } 
-                    
-                    // ты куда все дел
-                    // Я ничего не жал 
-                    // я только в 64 строке точку добавил, а если что, то 64 строка была на 66 строке изначально
-                    // верни класс <>
-                    // там класс 
-                    //
-                    //
-                    //
-                    //
-
             </script>
         </div>
     </main>
-    
+
+    <footer>
+        <p>created by linuxmasterrace team | 2024</p>
+    </footer>
 </body>
 </html>
