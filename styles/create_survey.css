@@ -301,3 +301,12 @@ footer p {
     -webkit-user-select: none;
     touch-action: manipulation;
 }
+.icon_right{
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -2px;
+}
+
+.back-to-homepage:hover{
+    text-decoration: underline;
+}
