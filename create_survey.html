@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=div, initial-scale=1.0">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/create_survey.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <title>Create survey</title>
 </head>
 <body>
+
     <header>
         <div class="logo">
             <img src="assets/icon.png" alt="">
@@ -22,9 +24,11 @@
     </header>
 
     <main>
+        <box-icon class="icon_right" name='right-arrow-alt' flip='horizontal'></box-icon>
         <div>
-            <a class="back-to-homepage" href="index.html">Вернуться на главную </a>
+            <a class="back-to-homepage" href="index.html">Вернуться на главную</a>
         </div>
+
 
         <div class="new-survey">
             <div class="head_survey">
@@ -59,7 +63,7 @@
                 
 
                 <button class="add-question" type="button" onclick="create_question()">Добавить вопрос</button>
-                
+
                 <button type="reset">Сбросить</button>
                 <button type="submit">Сохранить</button>
 
