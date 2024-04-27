@@ -1,21 +1,27 @@
-// let a = document.getElementById("create-field").addEventListener("click", create_answer_field);
-
 let number = 1;
 
+
+// attributes and values for first question
 document.getElementById("first-question-h2").innerText = "Вопрос №" + number;
 document.getElementById("first-question-label").setAttribute('for', 'question' + number)
 document.getElementById("first-question-input").setAttribute('name', 'question' + number)
-document.getElementById("first-question-ol").id = 'list-answers-' + number
+// document.getElementById("first-question-ol").id = 'list-answers-' + number
+// document.getElementById("first-question-button").id = 'list-answers-' + number
 
 
 
-function create_answer_field() {
+function create_answer_field(button) {
+    question_id = button.id.split('-')[2];
+    console.log(question_id)
     let number = document.getElementsByClassName('question-number').length;
     let li = document.createElement('li');
     let input = document.createElement('input');
     li.appendChild(input);
 
-    let ol = document.getElementById('list-answers-' + number);
+    // div with id="question-{{ number }}"
+    // div = document.getElementById(question_id)
+
+    let ol = document.getElementById("list-answers-" + question_id);
     ol.appendChild(li);
 
 
@@ -36,12 +42,12 @@ function create_question() {
 
     // label
     let label = document.createElement('label');
-    label.setAttribute("for", "question" + number);
+    label.setAttribute("for", "question-" + number);
     label.innerText = "Название вопроса:"
 
     // input
     let input = document.createElement('input');
-    input.setAttribute("name", "question" + number);
+    input.setAttribute("name", "question-" + number);
  
 
 
@@ -63,7 +69,8 @@ function create_question() {
     button =  document.createElement('button');
     button.setAttribute('type', 'button')
     button.innerText = "Добавить вариант"
-    button.setAttribute('onclick', "create_answer_field()")
+    button.setAttribute('onclick', "create_answer_field(this)")
+    button.id = "add-answer-" + number;
 
 
     li.appendChild(h2);
@@ -73,8 +80,12 @@ function create_question() {
     li.appendChild(ol);
     li.appendChild(button);
 
-
+    li.className = 'question'
     let list_questions = document.getElementById('list-questions');
+
+    
+
     list_questions.appendChild(li);
 
 }
+
