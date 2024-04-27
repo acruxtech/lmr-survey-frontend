@@ -2,8 +2,10 @@
 @import "variables.css";
 
 
+
 .name_survey {
-    font-family: "Nano Sans";
+    margin-bottom: -6px;
+    font-family: "Noto Sans";
     font-size: 16px;
     display: flex;
     flex-direction: column; 
@@ -12,8 +14,9 @@
 }
 
 .kategory_survey {
-    margin-top: 12px;
-    font-family: "Nano Sans";
+    margin-top: 8px;
+    margin-bottom: -6px;
+    font-family: "Noto Sans";
     font-size: 16px;
     display: flex;
     flex-direction: column; 
@@ -21,12 +24,7 @@
 
 }
 
-.res{
-    font-family: "Nano Sans";
-    margin-top: 10px;
-    margin-bottom: 10px;
 
-}
 h1 {
     font-size: 50px;
     text-align: center;
@@ -41,7 +39,6 @@ h1 {
 
 
 .new-survey {
-
     font-family: "Nano Sans";
     border: 2px solid #333; /* Цвет и толщина рамки */
     border-radius: 10px; /* Радиус скругления углов */
@@ -220,5 +217,87 @@ footer p {
 .head_survey{
     font-family: "Noto Sans";
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 7px;
+}
+
+.question-number{
+    font-family: "Noto Sans";
+    margin-bottom: 9px;
+    margin-top: 11px;
+}
+
+.res{
+    font-family: "Noto Sans";
+    margin-bottom: -5px;
+    margin-top: 7px;
+}
+
+.list_answer{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: "Noto Sans";
+}
+
+.name_question{
+    margin-bottom: 10px;
+    font-family: "Noto Sans";
+}
+
+.several{
+    font-family: "Noto Sans";
+}
+
+.input_name_question{
+    margin-top: 10px;
+}
+
+.li_answer{
+    margin-bottom: 2.4px;
+    margin-top: 2.4px;
+}
+
+.add-question{
+    margin-top: 4px;
+    height: 28px;
+    width: 128px;
+    background-color: var(--main-text);
+    border: 1px solid var(--main-text);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    color: black;
+    cursor: pointer;
+    font-size: 75%;
+    font-family: "Noto Sans";
+    outline: none;
+    outline: 0;
+    text-align: center;
+    vertical-align: middle;
+    text-wrap: nowrap;
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.add-answer{
+    margin-top: 4px;
+    height: 28px;
+    width: 128px;
+    background-color: var(--main-text);
+    border: 1px solid var(--main-text);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    color: black;
+    cursor: pointer;
+    font-size: 75%;
+    font-family: "Noto Sans";
+    outline: none;
+    outline: 0;
+    text-align: center;
+    vertical-align: middle;
+    text-wrap: nowrap;
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
