@@ -148,8 +148,15 @@ console.log(btn)
 btn.addEventListener("click", get_by_uuid);
 
 function get_by_uuid() {
-    button = document.getElementById("get-by-uuid");
-    button.innerHTML = '<form class="uuid-form"><input type="text"> <button>Поиск</button></form>';
+    div = document.getElementById("get-by-uuid");
+    // form = document.createElement("form");
+    // input = document.createElement("input");
+    // button = document.createElement("button");
+    // div.innerHTML = ""
+    // form.appendChild(input);
+    // form.appendChild(button);
+    // div.appendChild(form);
+    div.innerHTML = '<form class="uuid-form"><input type="text"> <button>Поиск</button></form>';
     
 }
 
