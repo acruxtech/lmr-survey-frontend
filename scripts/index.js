@@ -155,12 +155,13 @@ function get_by_uuid() {
 
 // Out click event
 
-main = document.getElementsByTagName("main");
+main = document.getElementsByTagName("main")[0];
 main.addEventListener("click", out_of_uuid);
 
-function out_of_uuid() {
+function out_of_uuid(event) {
+    event.preventDefault()
     button = document.getElementById("get-by-uuid");
-    button.innerHTML = '<a type="button" class="go-button">Пройти по uuid</a>';
+    button.innerHTML = '<a type="button" class="go-button">Пройти</a>';
     
 }
 
