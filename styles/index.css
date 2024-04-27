@@ -76,6 +76,7 @@ main {
     color: black;
     cursor: pointer;
     font-size: 120%;
+    font-family: "Noto Sans";
     outline: none;
     outline: 0;
     padding: 15px 40px;

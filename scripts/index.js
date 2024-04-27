@@ -102,7 +102,7 @@ function get_surveys() {
 
         const newSpan1 = document.createElement("span");
         const newSpan2 = document.createElement("span");
-        const newButton = document.createElement("button");
+        const newButton = document.createElement("a");
             
         newSpan1.classList.add("surv-info-item");
         newSpan2.classList.add("surv-info-item");
@@ -112,8 +112,9 @@ function get_surveys() {
 
         newSpan1.textContent = obj.title;
         newSpan2.textContent = obj.topic;
-        newButton.textContent = "Пройти";
-        newButton.href = "create_survey.html";
+        newButton.innerHTML = "Пройти";
+        newButton.setAttribute("href", "pass_survey.html");
+        newButton.setAttribute("type", "button");
 
         const surveysElement = document.querySelector(".surveys");
         surveysElement.appendChild(newDiv);

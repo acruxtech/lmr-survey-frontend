@@ -86,14 +86,14 @@ function create_question() {
 
     li.appendChild(h2);
     li.appendChild(label);
-    li.appendChild(input);
     li.appendChild(br);
+    li.appendChild(input);
+    li.appendChild(br2);
     li.appendChild(label2)
     li.appendChild(input2)
     li.appendChild(h3);
     li.appendChild(ol);
     li.appendChild(button);
-    // li.appendChild(br2)
     
     li.className = 'question'
     let list_questions = document.getElementById('list-questions');
