@@ -44,7 +44,7 @@ function create_question() {
     let label = document.createElement('label');
     label.setAttribute("for", "question-" + number);
     label.innerText = "Название вопроса:"
-
+    label.className = "name_question";
     // input
     let input = document.createElement('input');
     input.setAttribute("name", "question-" + number);
@@ -52,16 +52,20 @@ function create_question() {
 
 
     // h3
+
     let h3 = document.createElement('h3');
     h3.innerText = "Варианты ответов"
-    
+    h3.className = 'list_answer'
+
     // is_checkbox
     let label2 = document.createElement('label');
     label2.setAttribute("for", "question-" + number);
-    label2.innerText = "Выбор нескольких вариантов" 
+    label2.innerText = "Выбор нескольких вариантов";
+    label2.className = 'several';
     let input2 = document.createElement('input');
     input2.setAttribute("name", "question-" + number);
     input2.setAttribute("type", "checkbox");
+    input2.className = 'input_name_question';
 
 
     // ol
