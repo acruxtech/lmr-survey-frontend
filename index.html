@@ -15,11 +15,11 @@
             <p>lmr-survey</p>
         </div>
         <div class="header-buttons">
-            <a class="go-button white" href="create_survey.html">
-                Создать опрос
+            <a href="create_survey.html">
+                <button class="go-button white">Создать опрос</button>
             </a>
-            <a class="go-button" id="get-by-uuid" href="create_survey.html" onclick="get_by_uuid()">
-                Пройти по uuid
+            <a href="create_survey.html" id="get-by-uuid" onclick="get_by_uuid()">
+                <button class="go-button">Пройти</button>
             </a>
         </div>
     </header>
@@ -56,17 +56,18 @@
 
                     const newSpan1 = document.createElement("span");
                     const newSpan2 = document.createElement("span");
-                    const newA = document.createElement("a");
+                    const newButton = document.createElement("button");
                         
                     newSpan1.classList.add("surv-info-item");
                     newSpan2.classList.add("surv-info-item");
                     newSpan2.classList.add("surv-info-topic");
-                    newA.classList.add("start-button");
+                    newButton.classList.add("go-button");
+                    newButton.classList.add("surv-button");
 
                     newSpan1.textContent = obj.title;
                     newSpan2.textContent = obj.topic;
-                    newA.textContent = "Пройти";
-                    newA.href = "create_survey.html";
+                    newButton.textContent = "Пройти";
+                    newButton.href = "create_survey.html";
 
                     const surveysElement = document.querySelector(".surveys");
                     surveysElement.appendChild(newDiv);
@@ -74,7 +75,7 @@
                     surv_info.appendChild(newSpan1);
                     surv_info.appendChild(newSpan2);
                     newDiv.appendChild(surv_info);
-                    newDiv.appendChild(newA);
+                    newDiv.appendChild(newButton);
                 } 
             </script>
         </div>
