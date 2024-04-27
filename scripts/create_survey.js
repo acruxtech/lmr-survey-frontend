@@ -1,116 +1,69 @@
 let number = 1;
 
-
-// attributes and values for first question
-document.getElementById("first-question-h2").innerText = "Вопрос №" + number;
-document.getElementById("first-question-label").setAttribute('for', 'question' + number)
-document.getElementById("first-question-input").setAttribute('name', 'question' + number)
-// document.getElementById("first-question-ol").id = 'list-answers-' + number
-// document.getElementById("first-question-button").id = 'list-answers-' + number
-
+question_1 = document.getElementById("question-1")
+question_1_field = question_1.children[0]
+question_1_field.children[0].innerText = "Вопрос №" + number
+question_1_field.children[1].setAttribute('name', 'question' + number)
 
 
 function create_answer_field(button) {
     question_id = button.id.split('-')[2];
-    console.log(question_id)
-    let number = document.getElementsByClassName('question-number').length;
     let li = document.createElement('li');
     let input = document.createElement('input');
     li.appendChild(input);
     li.className = 'li_answer';
-
-    // div with id="question-{{ number }}"
-    // div = document.getElementById(question_id)
-
     let ol = document.getElementById("list-answers-" + question_id);
     ol.appendChild(li);
-
-
 }
+
 
 function create_question() {
     let number = document.getElementsByClassName('question-number').length;
     number++;
-    let li = document.createElement('li');
+    let new_question = document.createElement('li');
+    new_question.id = "question-" + number;
+    new_question.className = "question"
 
-    // h2
-    let h2 = document.createElement('h2');
-    h2.className = 'question-number'
-    h2.innerText = "Вопрос № " + number;
-
-
-    
-
-    // label
-    let label = document.createElement('label');
-    label.setAttribute("for", "question-" + number);
-    label.innerText = "Название вопроса:"
-    label.className = "name_question";
-    // input
+    let div = document.createElement('div')
+    div.className = 'survey_field'
+    let span = document.createElement('span');
+    span.className = 'question-number'
+    span.innerText = "Вопрос № " + number;
     let input = document.createElement('input');
     input.setAttribute("name", "question-" + number);
     input.className = 'input_name_question';
- 
+    div.appendChild(span)
+    div.appendChild(input)
+    new_question.appendChild(div)
 
-
-    // h3
-
-    let h3 = document.createElement('h3');
-    h3.innerText = "Варианты ответов"
-    h3.className = 'list_answer'
-
-    // is_checkbox
-    let label2 = document.createElement('label');
-    label2.setAttribute("for", "question-" + number);
-    label2.innerText = "Выбор нескольких вариантов";
-    label2.className = 'several';
-    let input2 = document.createElement('input');
-    input2.setAttribute("name", "question-" + number);
-    input2.setAttribute("type", "checkbox");
-    input2.className = 'input_name_question';
-
-
-    // ol
-    let ol = document.createElement('ol');
+    let div2 = document.createElement('div')
+    div2.className = 'survey_field'
+    let span2 = document.createElement('span');
+    span2.innerText = "Варианты ответов"
+    ol = document.createElement('ol');
     ol.id = 'list-answers-' + number;
-
-    //ol_li
     let ol_li = document.createElement('li');
+    ol_li.className = "li-answer"
     let ol_li_input = document.createElement('input');
     ol_li.appendChild(ol_li_input);
     ol.appendChild(ol_li);
+    div2.appendChild(span2)
+    div2.appendChild(ol)
+    new_question.appendChild(div2)
 
-    // button
-    button =  document.createElement('button');
+    let button = document.createElement('button');
     button.setAttribute('type', 'button')
     button.innerText = "Добавить вариант"
     button.setAttribute('onclick', "create_answer_field(this)")
     button.id = "add-answer-" + number;
-    button.className ='add-answer';
+    button.className ='button add-question-button';
+    new_question.appendChild(button)
 
-    br = document.createElement("br")
-    br2 = document.createElement("br")
 
-    li.appendChild(h2);
-    li.appendChild(label);
-    li.appendChild(br);
-    li.appendChild(input);
-    li.appendChild(br2);
-    li.appendChild(label2)
-    li.appendChild(input2)
-    li.appendChild(h3);
-    li.appendChild(ol);
-    li.appendChild(button);
-    
-    li.className = 'question'
     let list_questions = document.getElementById('list-questions');
-
-    
-
-    list_questions.appendChild(li);
-
-
+    list_questions.appendChild(new_question);
 }
+
 
 let btn = document.getElementById("get-by-uuid");
 // On click event

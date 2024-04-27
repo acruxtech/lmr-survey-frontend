@@ -2,48 +2,22 @@
 @import "variables.css";
 
 
-.uuid-form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.uuid-form input{
-    height: 100%;
-    margin: 5px;
-    font-size: 2em;
-}
-
-
-.enter-uuid {
-    border-radius: 10px;
-}
-
-
-.white {
-    background-color: var(--background);
-    border: 1px solid var(--background);
-}
-
-
 .search {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 50px;
+    margin: 50px 0;
 }
 
 
 .block_count{
     font-size: 200%;
-    font-family: "Noto Sans";
 }
 
 
 select {
     padding: 10px 25px;
-    font-family: "Noto Sans";
     font-size: 1em;
 }
 
@@ -84,14 +58,12 @@ select {
 
 .surv-info-item{
     color: var(--main-text);
-    font-family: "Noto Sans";
     margin-bottom: 25px;
 }
 
 
 .surv-info-topic{
     color: var(--second-text);
-    font-family: "Noto Sans";
 }
 
 
