@@ -1,99 +1,7 @@
-
-
-result = {
-    "surveys": [
-        {
-            "title": "мой опрос1",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос2",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос3",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос4",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос5",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос6",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос7",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос1",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос2",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос3",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос4",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос5",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос6",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        },
-        {
-            "title": "мой опрос7",
-            "topic": "какая то категория",
-            "show_result_after_passing": false,
-            questions: []
-        }
-    ]
-}
-
-
-function get_surveys() {
+function render_surveys(surveys) {
     let count = cnt;
     for (let i = 0; i < count; i += 1) {
-        const list_surveys = result.surveys[i] // СБОР ДАННЫХ с i-го опроса 
+        const list_surveys = surveys[i]
         const obj = JSON.parse(JSON.stringify(list_surveys))
 
         const newDiv = document.createElement("div");
@@ -128,20 +36,23 @@ function get_surveys() {
     } 
 }
 
+fetch(
+    `${root}/surveys`, {
+        method: "GET",
+    }
+)
+.then(res => res.json())
+.then(surveys => {
+    const numSurveys = surveys.length;
+    window.cnt = numSurveys;
+    let text = "Количество опросов: " + cnt;
+    document.getElementById("bc").textContent = text;
+
+    render_surveys(surveys)
+})
+.catch(res => console.error(res));
 
 
-// main
-
-
-const numSurveys = result.surveys.length;
-window.cnt = numSurveys;
-let data = "Количество опросов: " + cnt;
-document.getElementById("bc").textContent = data;
-
-
-
-// 
-get_surveys()
 
 
 
