@@ -144,19 +144,24 @@ get_surveys()
 
 const btn = document.getElementById("get-by-uuid");
 // On click event
-console.log(btn)
+// console.log(btn)
 btn.addEventListener("click", get_by_uuid);
 
 function get_by_uuid() {
-    div = document.getElementById("get-by-uuid");
-    // form = document.createElement("form");
-    // input = document.createElement("input");
-    // button = document.createElement("button");
-    // div.innerHTML = ""
-    // form.appendChild(input);
-    // form.appendChild(button);
-    // div.appendChild(form);
-    div.innerHTML = '<form class="uuid-form"><input type="text"> <button>Поиск</button></form>';
+    div = document.querySelector("#get-by-uuid");
+    console.log(div)
+    new_div = document.createElement("div")
+    new_div.id = "get-by-uuid"
+    form = document.createElement("form");
+    form.className = "uuid-form";
+    input = document.createElement("input");
+    button = document.createElement("button");
+    button.innerHTML = "Поиск"
+    form.appendChild(input);
+    form.appendChild(button);
+    div.appendChild(form);
+    once: true;
+    // div.innerHTML = '<form class="uuid-form"><input class="enter-uuid" placeholder="Введите id: " type="text"> <button>Поиск</button></form>';
     
 }
 

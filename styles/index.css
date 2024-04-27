@@ -13,7 +13,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 10%;
+    padding: 0 5%;
     align-items: center;
     height: 110px;
     width: 100%;
@@ -69,7 +69,6 @@ main {
     background-color: var(--main-text);
     border: 1px solid var(--main-text);
     border-radius: 15px;
-    margin-left: 30px;
     box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
     color: black;
     cursor: pointer;
@@ -102,11 +101,21 @@ main {
 }
 
 .uuid-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
 }
 
 .uuid-form input{
-    height: 150%;
+    height: 100%;
+    margin: 5px;
+    font-size: 2em;
+}
+
+
+.enter-uuid {
+    border-radius: 10px;
 }
 
 
