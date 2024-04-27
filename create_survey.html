@@ -37,20 +37,25 @@
             <p><label for="topic">Категория: <input id="topic" name="topic"></label></p>
             <p><label for="show_result">Показывать результат после прохождения? <input id="show_result" type="checkbox" name="show_result"></label></p>
             <br>
-            
+
             <ol id="list-questions">
                 <li id="question-1" class="question">
                     <h2 id="first-question-h2" class="question-number"></h2>
                     <label id="first-question-label">Название вопроса: </label>
                     <input id="first-question-input" type="text">
+                    <br>
+                    <label for="is_checkbox">Выбор нескольких вариантов</label>
+                    <input type="checkbox" name="is_checkbox" id="">
+                    
                     <h3>Варианты ответов</h3>
                     <ol id="list-answers-1">
                         <li><input type="text"></li>
                     </ol>
                 <button id="add-answer-1" class="add-answer" type="button" onclick="create_answer_field(this)">Добавить вариант</button>
                 </li>
+                <br>
             </ol>
-        <button class="add-question" type="button" onclick="create_question()">Добавить вопрос</button>
+        <button class="add-question" type="button" onclick="create_survey()">Добавить вопрос</button>
 
         <button type="submit">Сохранить</button>
 
@@ -59,9 +64,9 @@
 
     </main>
 
-    <footer>
+    <!-- <footer>
         <p>created by linuxmasterrace team | 2024</p>
-    </footer>
+    </footer> -->
 
 <script src="scripts/create_survey.js"></script>
 

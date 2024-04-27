@@ -27,7 +27,7 @@ function create_answer_field(button) {
 
 }
 
-function create_question() {
+function create_survey() {
     let number = document.getElementsByClassName('question-number').length;
     number++;
     let li = document.createElement('li');
@@ -54,6 +54,15 @@ function create_question() {
     // h3
     let h3 = document.createElement('h3');
     h3.innerText = "Варианты ответов"
+    
+    // is_checkbox
+    let label2 = document.createElement('label');
+    label2.setAttribute("for", "question-" + number);
+    label2.innerText = "Выбор нескольких вариантов" 
+    let input2 = document.createElement('input');
+    input2.setAttribute("name", "question-" + number);
+    input2.setAttribute("type", "checkbox");
+
 
     // ol
     let ol = document.createElement('ol');
@@ -73,14 +82,19 @@ function create_question() {
     button.id = "add-answer-" + number;
 
     br = document.createElement("br")
+    br2 = document.createElement("br")
 
     li.appendChild(h2);
     li.appendChild(label);
     li.appendChild(input);
+    li.appendChild(br);
+    li.appendChild(label2)
+    li.appendChild(input2)
     li.appendChild(h3);
     li.appendChild(ol);
     li.appendChild(button);
-    li.appendChild(br)
+    // li.appendChild(br2)
+    
     li.className = 'question'
     let list_questions = document.getElementById('list-questions');
 
