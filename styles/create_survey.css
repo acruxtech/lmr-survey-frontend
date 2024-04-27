@@ -7,6 +7,13 @@ h1 {
 }
 
 
+.back-to-homepage {
+    font-family: "Noto Sans";
+    font-size: 1.2em;
+
+}
+
+
 .new-survey {
     border: 2px solid #333; /* Цвет и толщина рамки */
     border-radius: 10px; /* Радиус скругления углов */
@@ -21,8 +28,8 @@ main {
     flex: 1;
     display: flex;
     gap: 5%;
-    margin-top: 160px;
-    padding: 0 10%;
+    /* margin-top: 160px; */
+    padding: 10%;
     width: 100%;
     background-color: var(--background);
 }
@@ -154,4 +161,30 @@ footer p {
 .white {
     background-color: var(--background);
     border: 1px solid var(--background);
+}
+
+#get-by-uuid {
+    display: flex;
+    margin: 0 10px;
+    padding: 10px;
+    width: 50%;
+    
+}
+
+.uuid-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.uuid-form input{
+    height: 100%;
+    margin: 5px;
+    font-size: 2em;
+}
+
+
+.enter-uuid {
+    border-radius: 10px;
 }
