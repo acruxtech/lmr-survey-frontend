@@ -59,6 +59,13 @@ main {
     background-color: #229091;
 }
 
+.go-button {
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #C8E9FF;
+    vertical-align: center;
+}
 
 .go-button {
     display: flex;
@@ -78,18 +85,13 @@ main {
 }
 
 
-.go-button a {
-    font-size: 22px;
-    font-weight: 600;
-    text-decoration: none;
-    color: #C8E9FF;
-    vertical-align: center;
-}
+
  
 
 .go-button:hover {
     background-position: 100% 0;
     transition: all .4s ease-in-out;
+    transform: scale(0.95);
 }
 
 

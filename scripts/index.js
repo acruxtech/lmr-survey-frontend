@@ -92,3 +92,10 @@ result = {
 
 const numSurveys = result.surveys.length;
 window.cnt = numSurveys;
+
+
+
+
+function get_by_uuid() {
+    input = document.getElementById("get-by-uuid")
+}
