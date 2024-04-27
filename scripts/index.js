@@ -89,9 +89,7 @@ result = {
 
 
 function get_surveys() {
-
     let count = cnt;
-    // console.log(cnt)
     for (let i = 0; i < count; i += 1) {
         const list_surveys = result.surveys[i] // СБОР ДАННЫХ с i-го опроса 
         const obj = JSON.parse(JSON.stringify(list_surveys))
@@ -104,17 +102,18 @@ function get_surveys() {
 
         const newSpan1 = document.createElement("span");
         const newSpan2 = document.createElement("span");
-        const newA = document.createElement("a");
+        const newButton = document.createElement("button");
             
         newSpan1.classList.add("surv-info-item");
         newSpan2.classList.add("surv-info-item");
         newSpan2.classList.add("surv-info-topic");
-        newA.classList.add("start-button");
+        newButton.classList.add("go-button");
+        newButton.classList.add("surv-button");
 
         newSpan1.textContent = obj.title;
         newSpan2.textContent = obj.topic;
-        newA.textContent = "Пройти";
-        newA.href = "create_survey.html";
+        newButton.textContent = "Пройти";
+        newButton.href = "create_survey.html";
 
         const surveysElement = document.querySelector(".surveys");
         surveysElement.appendChild(newDiv);
@@ -122,8 +121,8 @@ function get_surveys() {
         surv_info.appendChild(newSpan1);
         surv_info.appendChild(newSpan2);
         newDiv.appendChild(surv_info);
-        newDiv.appendChild(newA);
-} 
+        newDiv.appendChild(newButton);
+    } 
 }
 
 

@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=div, initial-scale=1.0">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/index.css">
-
-
     <title>Document</title>
 </head>
 <body>
@@ -40,44 +38,7 @@
             </select>
         </div>
 
-        <div class="surveys">    
-            <script>
-                let count = cnt;
-                for (let i = 0; i < count; i += 1) {
-                    const list_surveys = result.surveys[i] // СБОР ДАННЫХ с i-го опроса 
-                    const obj = JSON.parse(JSON.stringify(list_surveys))
-
-                    const newDiv = document.createElement("div");
-                    newDiv.classList.add("surv");
-
-                    const surv_info = document.createElement("div")
-                    surv_info.classList.add("surv-info")
-
-                    const newSpan1 = document.createElement("span");
-                    const newSpan2 = document.createElement("span");
-                    const newButton = document.createElement("button");
-                        
-                    newSpan1.classList.add("surv-info-item");
-                    newSpan2.classList.add("surv-info-item");
-                    newSpan2.classList.add("surv-info-topic");
-                    newButton.classList.add("go-button");
-                    newButton.classList.add("surv-button");
-
-                    newSpan1.textContent = obj.title;
-                    newSpan2.textContent = obj.topic;
-                    newButton.textContent = "Пройти";
-                    newButton.href = "create_survey.html";
-
-                    const surveysElement = document.querySelector(".surveys");
-                    surveysElement.appendChild(newDiv);
-
-                    surv_info.appendChild(newSpan1);
-                    surv_info.appendChild(newSpan2);
-                    newDiv.appendChild(surv_info);
-                    newDiv.appendChild(newButton);
-                } 
-            </script>
-        </div>
+        <div class="surveys"></div>
     </main>
 
     <footer>
