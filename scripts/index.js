@@ -136,6 +136,9 @@ window.cnt = numSurveys;
 let data = "Количество опросов: " + cnt;
 document.getElementById("bc").textContent = data;
 
+
+
+// 
 get_surveys()
 
 
