@@ -39,18 +39,15 @@
             
         </div>
 
-    
-        <p id="demo"></p>  <!-- разрешает обрабатывать запросы в цикле снизу -->
+        <p id="demo"></p>  <!-- Не удалять разрешает обрабатывать запросы в цикле снизу -->
 
         <div class="surveys">                             
         <script>
             let count = cnt;
             for (let i = 0; i < count; i += 1) {
                 const list_surveys = result.surveys[i]
-                console.log(list_surveys, typeof(list_surveys))
                 const obj = JSON.parse(JSON.stringify(list_surveys))
-                console.log(obj)
-                document.getElementById("demo").innerHTML = obj.title
+
 
                 const newDiv = document.createElement("div");
                 newDiv.classList.add("surv");
@@ -66,7 +63,7 @@
                 newSpan1.textContent = obj.title;
                 newSpan2.textContent = obj.topic;
                 newA.textContent = "Start";
-                newA.href = "https://example.com";
+                newA.href = "create_survey.html";
 
 
 
@@ -91,5 +88,6 @@
             </script>
         </div>
     </main>
+    
 </body>
 </html>
