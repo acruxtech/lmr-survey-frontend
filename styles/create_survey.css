@@ -7,5 +7,6 @@ h1 {
 .new-survey {
     display: flex;
     flex-direction: column;
+    
 }
 

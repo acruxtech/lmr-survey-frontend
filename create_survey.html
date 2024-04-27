@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=div, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/create_survey.css">
+    <link rel="stylesheet" href="create_survey.css">
     <!-- <script src="index.js"></script> -->
     <title>Create survey</title>
 </head>
@@ -15,14 +15,35 @@
 
 <main>
     <div class="new-survey">
-        <form action="">
+        <form action="" method="post">
+        
+        <p><label for="title">Title: <input id="title" name="title"></p>
+        <p><label for="topic">Topic: <input id="topic" name="topic"></label></p>
+        <p><label for="show_result">Show result after passing? <input id="show_result" type="checkbox" name="show_result"></label></p>
 
-        <label for="title">Title: <input id="title" name="title"></label>
-        <label for="topic">Topic: <input id="topic" name="topic"></label>
-        <label for="sh">Show result after passing? <input id="show_result" type="checkbox" name="show_result"></label>
+
+        <ol id="list-questions">
+            <li id="first-question">
+                <h2 id="first-question-h2" class="question-number"></h2>
+                <label id="first-question-label">Название вопроса: </label>
+                <input id="first-question-input" type="text">
+                <h3>Варианты ответов</h3>
+                <ol id="first-question-ol">
+                    <li><input type="text"></li>
+                </ol>
+                <button type="button" onclick="create_answer_field()">Добавить вариант</button>
+
+                
+            </li>
+        </ol>
+        <button type="button" onclick="create_question()">Добавить вопрос</button>
+
+        <button type="submit">Сохранить</button>
         </form>
     </div>
 </main>
 
+
+<script src="create_survey.js"></script>
 </body>
 </html>
