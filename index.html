@@ -17,14 +17,12 @@
             <p>lmr-survey</p>
         </div>
         <div class="header-buttons">
-            <a class="go-button white" href="create_survey.html">
-                Создать опрос
+            <a href="create_survey.html">
+                <button class="go-button white">Создать опрос</button>
             </a>
-            <div id="get-by-uuid">
-                <a type="button" class="go-button">
-                    Пройти по uuid
-                </a>
-            </div>
+            <a href="create_survey.html" id="get-by-uuid" onclick="get_by_uuid()">
+                <button class="go-button">Пройти</button>
+            </a>
         </div>
     </header>
 
@@ -43,7 +41,42 @@
         </div>
 
         <div class="surveys">    
-    
+            <script>
+                let count = cnt;
+                for (let i = 0; i < count; i += 1) {
+                    const list_surveys = result.surveys[i] // СБОР ДАННЫХ с i-го опроса 
+                    const obj = JSON.parse(JSON.stringify(list_surveys))
+
+                    const newDiv = document.createElement("div");
+                    newDiv.classList.add("surv");
+
+                    const surv_info = document.createElement("div")
+                    surv_info.classList.add("surv-info")
+
+                    const newSpan1 = document.createElement("span");
+                    const newSpan2 = document.createElement("span");
+                    const newButton = document.createElement("button");
+                        
+                    newSpan1.classList.add("surv-info-item");
+                    newSpan2.classList.add("surv-info-item");
+                    newSpan2.classList.add("surv-info-topic");
+                    newButton.classList.add("go-button");
+                    newButton.classList.add("surv-button");
+
+                    newSpan1.textContent = obj.title;
+                    newSpan2.textContent = obj.topic;
+                    newButton.textContent = "Пройти";
+                    newButton.href = "create_survey.html";
+
+                    const surveysElement = document.querySelector(".surveys");
+                    surveysElement.appendChild(newDiv);
+
+                    surv_info.appendChild(newSpan1);
+                    surv_info.appendChild(newSpan2);
+                    newDiv.appendChild(surv_info);
+                    newDiv.appendChild(newButton);
+                } 
+            </script>
         </div>
     </main>
 
