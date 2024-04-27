@@ -1,10 +1,12 @@
 body {
     flex-direction: column;
     background-color: var(--background);
+    font-family: "Noto Sans";
 }
 
 
 header {
+    z-index: 1000;
     top: 0;
     position: fixed;
     display: flex;
@@ -16,8 +18,6 @@ header {
     width: 100%;
     background-color: var(--background-dark);
     border-bottom: solid 10px #383048;
-    font-family: "Noto Sans";
-
 }   
 
 
@@ -54,7 +54,7 @@ header a{
 }
 
 
-.go-button {
+.button {
     background-color: var(--main-text);
     border: 1px solid var(--main-text);
     border-radius: 15px;
@@ -62,7 +62,6 @@ header a{
     color: black;
     cursor: pointer;
     font-size: 120%;
-    font-family: "Noto Sans";
     outline: none;
     outline: 0;
     padding: 15px 40px;
@@ -77,9 +76,15 @@ header a{
 }
 
 
-.go-button:hover {
+.button:hover {
   box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
   transform: translateY(-2px);
+}
+
+
+.white {
+    background-color: var(--background);
+    border: 1px solid var(--background);
 }
 
 
@@ -88,10 +93,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    margin-top: 160px;
+    margin-top: 110px;
     padding: 0 10%;
     width: 100%;
-    min-height: calc(100vh - 270px);
+    min-height: calc(100vh - 220px);
     background-color: var(--background);
 }
 
@@ -137,5 +142,30 @@ footer {
 
 footer p {
     color: var(--second-text);
-    font-family: "Noto Sans";
+}
+
+
+#get-by-uuid {
+    display: flex;
+    padding: 10px;
+    width: 50%;
+}
+
+
+.uuid-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.uuid-form input{
+    height: 100%;
+    margin: 5px;
+    font-size: 2em;
+}
+
+
+.enter-uuid {
+    border-radius: 10px;
 }

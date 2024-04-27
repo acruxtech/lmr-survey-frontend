@@ -17,7 +17,7 @@ function render_surveys(surveys) {
         newSpan1.classList.add("surv-info-item");
         newSpan2.classList.add("surv-info-item");
         newSpan2.classList.add("surv-info-topic");
-        newButton.classList.add("go-button");
+        newButton.classList.add("button");
         newButton.classList.add("surv-button");
 
         newSpan1.textContent = obj.title;
