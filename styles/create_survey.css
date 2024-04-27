@@ -8,13 +8,18 @@ h1 {
 
 
 .new-survey {
-    display: flex;
-    flex-direction: column;
-    
+    height: 300px;
+    border: 2px solid #333; /* Цвет и толщина рамки */
+    border-radius: 10px; /* Радиус скругления углов */
+    padding: 20px; /* Внутренний отступ */
+    background-color: #f9f9f9; /* Цвет фона */
+    max-width: 600px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование по горизонтали */
 }
 
 
 main {
+    flex: 1;
     display: flex;
     gap: 5%;
     margin-top: 160px;
@@ -24,6 +29,9 @@ main {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: var(--background);
 }
 
@@ -72,18 +80,16 @@ header img {
     align-items: center;
 }
 
-
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 110px;
+    margin-top: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--background-dark);
     border-top: solid 10px #383048;
+    height: 110px;
 }
+
 
 
 footer p {
