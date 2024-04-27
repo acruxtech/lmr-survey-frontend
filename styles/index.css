@@ -101,7 +101,7 @@ main {
 }
 
 
-.search{
+.search {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -177,11 +177,12 @@ select {
 
 footer {
     width: 100%;
-    height: 100px;
+    height: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--background-dark);
+    border-top: solid 10px #383048;
 }
 
 
