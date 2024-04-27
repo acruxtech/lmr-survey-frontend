@@ -255,3 +255,49 @@ footer p {
     margin-bottom: 2.4px;
     margin-top: 2.4px;
 }
+
+.add-question{
+    margin-top: 4px;
+    height: 28px;
+    width: 128px;
+    background-color: var(--main-text);
+    border: 1px solid var(--main-text);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    color: black;
+    cursor: pointer;
+    font-size: 75%;
+    font-family: "Noto Sans";
+    outline: none;
+    outline: 0;
+    text-align: center;
+    vertical-align: middle;
+    text-wrap: nowrap;
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.add-answer{
+    margin-top: 4px;
+    height: 28px;
+    width: 128px;
+    background-color: var(--main-text);
+    border: 1px solid var(--main-text);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    color: black;
+    cursor: pointer;
+    font-size: 75%;
+    font-family: "Noto Sans";
+    outline: none;
+    outline: 0;
+    text-align: center;
+    vertical-align: middle;
+    text-wrap: nowrap;
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}

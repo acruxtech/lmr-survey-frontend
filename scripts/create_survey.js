@@ -86,6 +86,7 @@ function create_question() {
     button.innerText = "Добавить вариант"
     button.setAttribute('onclick', "create_answer_field(this)")
     button.id = "add-answer-" + number;
+    button.className ='add-answer';
 
     br = document.createElement("br")
     br2 = document.createElement("br")
