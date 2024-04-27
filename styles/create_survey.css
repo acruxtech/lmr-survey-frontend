@@ -4,6 +4,7 @@
 
 
 .name_survey {
+    margin-bottom: -6px;
     font-family: "Noto Sans";
     font-size: 16px;
     display: flex;
@@ -13,7 +14,8 @@
 }
 
 .kategory_survey {
-    margin-top: 12px;
+    margin-top: 8px;
+    margin-bottom: -6px;
     font-family: "Noto Sans";
     font-size: 16px;
     display: flex;
@@ -37,7 +39,6 @@ h1 {
 
 
 .new-survey {
-
     font-family: "Nano Sans";
     border: 2px solid #333; /* Цвет и толщина рамки */
     border-radius: 10px; /* Радиус скругления углов */
@@ -216,7 +217,7 @@ footer p {
 .head_survey{
     font-family: "Noto Sans";
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 7px;
 }
 
 .question-number{
@@ -238,6 +239,7 @@ footer p {
 }
 
 .name_question{
+    margin-bottom: 10px;
     font-family: "Noto Sans";
 }
 
@@ -247,4 +249,9 @@ footer p {
 
 .input_name_question{
     margin-top: 10px;
+}
+
+.li_answer{
+    margin-bottom: 2.4px;
+    margin-top: 2.4px;
 }

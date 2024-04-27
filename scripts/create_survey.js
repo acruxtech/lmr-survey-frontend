@@ -17,6 +17,7 @@ function create_answer_field(button) {
     let li = document.createElement('li');
     let input = document.createElement('input');
     li.appendChild(input);
+    li.className = 'li_answer';
 
     // div with id="question-{{ number }}"
     // div = document.getElementById(question_id)
@@ -48,6 +49,7 @@ function create_question() {
     // input
     let input = document.createElement('input');
     input.setAttribute("name", "question-" + number);
+    input.className = 'input_name_question';
  
 
 
