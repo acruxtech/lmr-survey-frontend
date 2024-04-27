@@ -149,18 +149,23 @@ btn.addEventListener("click", get_by_uuid);
 
 function get_by_uuid() {
     div = document.querySelector("#get-by-uuid");
-    console.log(div)
+    div.remove()
+
+    header_buttons = document.querySelector(".header-buttons");
     new_div = document.createElement("div")
     new_div.id = "get-by-uuid"
+
     form = document.createElement("form");
     form.className = "uuid-form";
+    form.setAttribute("action", "")
     input = document.createElement("input");
     button = document.createElement("button");
     button.innerHTML = "Поиск"
     form.appendChild(input);
     form.appendChild(button);
-    div.appendChild(form);
-    once: true;
+    new_div.appendChild(form);
+
+    header_buttons.appendChild(new_div)
     // div.innerHTML = '<form class="uuid-form"><input class="enter-uuid" placeholder="Введите id: " type="text"> <button>Поиск</button></form>';
     
 }

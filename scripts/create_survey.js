@@ -72,6 +72,7 @@ function create_question() {
     button.setAttribute('onclick', "create_answer_field(this)")
     button.id = "add-answer-" + number;
 
+    br = document.createElement("br")
 
     li.appendChild(h2);
     li.appendChild(label);
@@ -79,13 +80,14 @@ function create_question() {
     li.appendChild(h3);
     li.appendChild(ol);
     li.appendChild(button);
-
+    li.appendChild(br)
     li.className = 'question'
     let list_questions = document.getElementById('list-questions');
 
     
 
     list_questions.appendChild(li);
+
 
 }
 
