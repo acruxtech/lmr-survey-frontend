@@ -39,13 +39,11 @@
             
         </div>
 
-        <p id="demo"></p>  <!-- Не удалять разрешает обрабатывать запросы в цикле снизу -->
-
         <div class="surveys">                             
         <script>
             let count = cnt;
             for (let i = 0; i < count; i += 1) {
-                const list_surveys = result.surveys[i]
+                const list_surveys = result.surveys[i] // СБОР ДАННЫХ с i-го опроса 
                 const obj = JSON.parse(JSON.stringify(list_surveys))
 
 
