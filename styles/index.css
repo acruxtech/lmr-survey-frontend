@@ -48,16 +48,7 @@ header img {
 }
 
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 150px;
-    padding: 0 10%;
-    width: 100vw;
-    background-color: #229091;
-}
+
 
 .go-button {
     font-size: 22px;
@@ -85,9 +76,6 @@ main {
 }
 
 
-
- 
-
 .go-button:hover {
     background-position: 100% 0;
     transition: all .4s ease-in-out;
@@ -100,6 +88,14 @@ main {
 }
 
 
+.uuid-form {
+    display: flex;
+    margin: 0 10px;
+    padding: 10px;
+    width: 50%;
+}
+
+
 .white {
     background-image: linear-gradient(to right, #c1ecff, #8e8e8e, #8d8d8d, #171717);
     box-shadow: 0 4px 15px 0 rgba(234, 255, 254, 0.75);
@@ -109,6 +105,21 @@ main {
 .white a {
     color: black;
 }
+
+
+
+/* main */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+    padding: 0 10%;
+    width: 100vw;
+    background-color: #229091;
+}
+
 
 
 .search{
