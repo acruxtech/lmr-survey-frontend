@@ -3,26 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=div, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/create_survey.css">
     <title>Create survey</title>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="assets/icon.png" alt="">
+            <p>lmr-survey</p>
+        </div>
 
-<header>
-    <h1>Create new survey!</h1>
-    <a href="index.html">Вернуться на главную</a>
-</header>
-
-<main>
-    <div class="new-survey">
-        <form action="" method="post">
-        
-        <p><label for="title">Title: <input id="title" name="title"></p>
-        <p><label for="topic">Topic: <input id="topic" name="topic"></label></p>
-        <p><label for="show_result">Show result after passing? <input id="show_result" type="checkbox" name="show_result"></label></p>
+        <div class="header-buttons">
+            <div id="get-by-uuid">
+                <a class="go-button">Пройти</a>
+            </div>
+        </div>
+    </header>
 
 
-        <ol id="list-questions">
+    <main>
+
+        <div>
+            <a href="index.html">
+                <button class="go-back">Вернуться на главную</button>
+            </a>
+        </div>
+
+        <div class="new-survey">
+
+            <form action="" method="post">
+            <p><label for="title">Title: <input id="title" name="title"></p>
+            <p><label for="topic">Topic: <input id="topic" name="topic"></label></p>
+            <p><label for="show_result">Show result after passing? <input id="show_result" type="checkbox" name="show_result"></label></p>
+
+            <ol id="list-questions">
                 <li id="question-1" class="question">
                     <h2 id="first-question-h2" class="question-number"></h2>
                     <label id="first-question-label">Название вопроса: </label>
@@ -31,17 +46,24 @@
                     <ol id="list-answers-1">
                         <li><input type="text"></li>
                     </ol>
-                    <button id="add-answer-1" class="add-answer" type="button" onclick="create_answer_field(this)">Добавить вариант</button>
+                <button id="add-answer-1" class="add-answer" type="button" onclick="create_answer_field(this)">Добавить вариант</button>
                 </li>
-        </ol>
+            </ol>
         <button class="add-question" type="button" onclick="create_question()">Добавить вопрос</button>
 
         <button type="submit">Сохранить</button>
+
         </form>
     </div>
-</main>
 
+    </main>
+
+    <footer>
+        <p>created by linuxmasterrace team | 2024</p>
+    </footer>
 
 <script src="scripts/create_survey.js"></script>
+
+
 </body>
 </html>

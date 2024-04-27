@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "variables.css";
+
 h1 {
     font-size: 50px;
     text-align: center;
@@ -10,3 +13,140 @@ h1 {
     
 }
 
+
+main {
+    display: flex;
+    gap: 5%;
+    margin-top: 160px;
+    padding: 0 10%;
+    width: 100%;
+    background-color: var(--background);
+}
+
+body {
+    background-color: var(--background);
+}
+
+
+header {
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: center;
+    height: 110px;
+    width: 100%;
+    background-color: var(--background-dark);
+    border-bottom: solid 10px #383048;
+    font-family: "Noto Sans";
+
+}   
+
+
+.logo {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    height: 100%;
+}
+
+
+header p {
+    color: var(--main-text);
+    font-size: 300%;
+}
+
+
+header img {
+    height: 50%;
+    padding-right: 20px;
+}
+
+
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-dark);
+    border-top: solid 10px #383048;
+}
+
+
+footer p {
+    color: var(--second-text);
+    font-family: "Noto Sans";
+}
+
+#get-by-uuid {
+    display: flex;
+    margin: 0 10px;
+    padding: 10px;
+    width: 50%;
+    
+}
+
+/* Кнопка "Вернуться на главную"  */
+
+.go-back {
+    
+    background-color: black;
+    border: 1px solid var(--main-text);
+    border-radius: 15px;
+    margin-left: 30px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    color: var(--main-text);
+    cursor: pointer;
+    font-size: 120%;
+    outline: none;
+    outline: 0;
+    padding: 15px 40px;
+    text-align: center;
+    vertical-align: middle;
+    text-wrap: nowrap;
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+/* Кнопка "Пройти"  */
+.go-button {  
+    
+    background-color: var(--main-text);
+    border: 1px solid var(--main-text);
+    border-radius: 15px;
+    margin-left: 30px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    color: black;
+    cursor: pointer;
+    font-size: 120%;
+    outline: none;
+    outline: 0;
+    padding: 15px 40px;
+    text-align: center;
+    vertical-align: middle;
+    text-wrap: nowrap;
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.white {
+    background-color: var(--background);
+    border: 1px solid var(--background);
+}
