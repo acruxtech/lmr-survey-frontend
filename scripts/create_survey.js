@@ -27,7 +27,7 @@ function create_answer_field(button) {
 
 }
 
-function create_survey() {
+function create_question() {
     let number = document.getElementsByClassName('question-number').length;
     number++;
     let li = document.createElement('li');
