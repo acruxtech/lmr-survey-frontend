@@ -8,6 +8,7 @@ h1 {
 
 
 .new-survey {
+    height: 300px;
     border: 2px solid #333; /* Цвет и толщина рамки */
     border-radius: 10px; /* Радиус скругления углов */
     padding: 20px; /* Внутренний отступ */
