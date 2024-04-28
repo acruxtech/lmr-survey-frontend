@@ -3,7 +3,7 @@ let number = 1;
 question_1 = document.getElementById("question-1")
 question_1_field = question_1.children[0]
 question_1_field.children[0].innerText = "Вопрос №" + number
-question_1_field.children[1].setAttribute('name', 'question' + number)
+question_1_field.children[1].setAttribute('name', 'question-' + number)
 
 
 function create_answer_field(button) {
@@ -63,6 +63,41 @@ function create_question() {
     let list_questions = document.getElementById('list-questions');
     list_questions.appendChild(new_question);
 }
+
+
+let form = document.getElementById("new-survey-form");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    title = document.getElementById("title").value;
+    topic = document.getElementById("topic").value;
+    show_result = document.getElementById("show_result").value;
+    questions = []
+
+    new_survey = {
+        "title": title,
+        "topic": topic,
+        "show_result_after_passing": true,
+        "questions": questions,
+    }
+    console.log(new_survey)
+    fetch(
+        `${root}/create`, {
+            method: "POST",
+            body: JSON.stringify(new_survey),
+        }
+    )
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(res => console.error(res));
+});
+
+
+
+
+
 
 
 let btn = document.getElementById("get-by-uuid");
