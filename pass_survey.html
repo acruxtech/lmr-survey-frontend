@@ -6,9 +6,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/pass_survey.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <h1>Страница для прохождения опроса</h1>
+    <header>
+        <div class="logo">
+            <img src="assets/icon.png" alt="">
+            <p>lmr-survey</p>
+        </div>
+
+        <div class="header-buttons">
+            <div id="get-by-uuid">
+                <a class="go-button">Пройти опрос</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <box-icon class="icon_right" name='right-arrow-alt' flip='horizontal'></box-icon>
+        <div>
+            <a class="back-to-homepage" href="index.html">Вернуться на главную</a>
+        </div>
+
+
+        <div class="new-survey">
+            <div class="head_survey">
+                <p>Прохождение опроса</p>
+            </div>
+            <div class="name_survey">
+
+            </div>
+            <div class="list_task">
+
+            </div>
+        </div>
+
+        <div id="timer">
+            <span id="minutes">Секунд осталось </span>
+            :
+            <span id="seconds">00</span>
+          </div>
+    </main>
+
+
+    <footer>
+        <p>created by linuxmasterrace team | 2024</p>
+    </footer>
+    <script src="surv.js"></script>
 </body>
 </html>

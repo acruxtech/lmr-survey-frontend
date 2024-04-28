@@ -2,151 +2,22 @@
 @import "variables.css";
 
 
-body {
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: var(--background);
-}
-
-
-header {
-    top: 0;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 5%;
-    align-items: center;
-    height: 110px;
-    width: 100%;
-    background-color: var(--background-dark);
-    border-bottom: solid 10px #383048;
-    font-family: "Noto Sans";
-
-}   
-
-
-.logo {
-    display: flex;
-    flex-direction: row;    
-    align-items: center;
-    height: 100%;
-}
-
-
-header p {
-    color: var(--main-text);
-    font-size: 300%;
-}
-
-
-header img {
-    height: 50%;
-    padding-right: 20px;
-}
-
-
-.header-buttons {
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    align-items: center;
-}
-
-
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /* margin-top: 150px; */
-    padding: 10%;
-    width: 100%;
-    background-color: var(--background);
-}
-
-
-.go-button {
-    
-    background-color: var(--main-text);
-    border: 1px solid var(--main-text);
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
-    color: black;
-    cursor: pointer;
-    font-size: 120%;
-    font-family: "Noto Sans";
-    outline: none;
-    outline: 0;
-    padding: 15px 40px;
-    text-align: center;
-    vertical-align: middle;
-    text-wrap: nowrap;
-    transition: transform 150ms, box-shadow 150ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-}
-
-
-.go-button:hover {
-  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
-  transform: translateY(-2px);
-}
-
-
-#get-by-uuid {
-    display: flex;
-    margin: 0 10px;
-    padding: 10px;
-    width: 50%;
-    
-}
-
-.uuid-form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-
-.uuid-form input{
-    height: 100%;
-    margin: 5px;
-    font-size: 2em;
-}
-
-
-.enter-uuid {
-    border-radius: 10px;
-}
-
-
-.white {
-    background-color: var(--background);
-    border: 1px solid var(--background);
-}
-
-
 .search {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 50px;
+    margin: 50px 0;
 }
 
 
 .block_count{
     font-size: 200%;
-    font-family: "Noto Sans";
 }
 
 
 select {
     padding: 10px 25px;
-    font-family: "Noto Sans";
     font-size: 1em;
 }
 
@@ -157,7 +28,7 @@ select {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: left;
     gap: 0 2.6%;    
 }
 
@@ -187,57 +58,17 @@ select {
 
 .surv-info-item{
     color: var(--main-text);
-    font-family: "Noto Sans";
     margin-bottom: 25px;
 }
 
 
 .surv-info-topic{
     color: var(--second-text);
-    font-family: "Noto Sans";
 }
 
 
 .surv-button {
     margin: 0;
     font-size: 100%;
-}
-
-
-#myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color:  #242424; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 14px; /* Increase font size */
-  }
-  
-#myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
-  }
-
-
-footer {
-    width: 100%;
-    height: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--background-dark);
-    border-top: solid 10px #383048;
-}
-
-
-footer p {
-    color: var(--second-text);
-    font-family: "Noto Sans";
 }
 
