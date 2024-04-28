@@ -23,7 +23,7 @@ function render_surveys(surveys) {
         newSpan1.textContent = obj.title;
         newSpan2.textContent = obj.topic;
         newButton.innerHTML = "Пройти";
-        newButton.setAttribute("href", "pass.html");
+        newButton.setAttribute("href", "pass.html?uuid=" + obj["uuid"]);
         newButton.setAttribute("type", "button");
 
         const surveysElement = document.querySelector(".surveys");

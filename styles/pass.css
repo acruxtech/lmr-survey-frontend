@@ -17,12 +17,12 @@ h1 {
 
 .new-survey {
     font-family: "Nano Sans";
-    border: 2px solid #333; /* Цвет и толщина рамки */
-    border-radius: 10px; /* Радиус скругления углов */
-    padding: 20px; /* Внутренний отступ */
-    background-color: #f9f9f9; /* Цвет фона */
-    max-width: 600px; /* Максимальная ширина контейнера */
-    margin: 0 auto; /* Центрирование по горизонтали */
+    border: 2px solid #333; 
+    border-radius: 10px; 
+    padding: 20px; 
+    background-color: #f9f9f9;
+    max-width: 600px; 
+    margin: 0 auto;
 }
 
 

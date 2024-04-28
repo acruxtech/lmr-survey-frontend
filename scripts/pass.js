@@ -1,35 +1,6 @@
-// survey = {
-//     "title": "название опроса",
-//     "topic": "образование",
-//     "is_public": true,
-//     "show_result_after_passing": true,
-//     "questions": [
-//       {
-//         "title": "вопрос 1",
-//         "text": "Выберите дату начала СВО",
-//         "answers": ["01.01", "24.02"],
-//         "type": "field"
-//       },
-//       {
-//         "title": "вопрос 2",
-//         "text": "Выберите дату начала ВСО",
-//         "answers": ["01.01", "24.02"],
-//         "type": "field"
-//       },
-//       {
-//         "title": "вопрос 3",
-//         "text": "Выберите дату начала СОВ",
-//         "answers": ["01.01", "24.02"],
-//         "type": "field"
-//       }
-//     ],
-//     "after_passing_text": "красавчик",
-//     "passing_score": 100,
-//     "time_to_pass": 10
-// }
+let params = new URLSearchParams(document.location.search);
+let uuid = params.get("uuid");
 
-
-uuid = "46f249cd-27a8-4363-bb62-25ec0a1fc7ff"
 fetch(
 	`${root}/survey?uuid=${uuid}`, {
 		method: "GET",
@@ -50,10 +21,6 @@ function render_name_surveys(survey) { // Добавление название 
     const text_surveyName = document.createElement('p'); // создание элемента p
     text_surveyName.classList.add('survey_name_p');
     text_surveyName.innerHTML = name_survey; // Добавление текста в элемент p
-    //const surveyName = document.createElement('div'); // создание элемента div в котором будет название опроса
-    //surveyName.classList.add('survey_name_div'); //добавление класса этому элемента
-    //surveyName.appendChild(text_surveyName); // добавление элемента p в div surveyName   ТЕПЕРЬ ЭТО ВСЁ НАХУЙ НЕ НАДО, Я СРАЗУ В DIV В HTML ДОБАВЛЯЮ
-
     const container = document.querySelector('.name_survey'); // получение элемента container, в нём будет содержатся surveyName-название опроса
     container.appendChild(text_surveyName); // добавить элемент с названием опроса в new-survey
 }

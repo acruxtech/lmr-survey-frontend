@@ -51,8 +51,6 @@ header a{
 .header-buttons {
     display: flex;
     flex-direction: row;
-    padding: 10px;
-    align-items: center;
 }
 
 
@@ -149,7 +147,6 @@ footer p {
 
 #get-by-uuid {
     display: flex;
-    padding: 10px;
     width: 50%;
 }
 
