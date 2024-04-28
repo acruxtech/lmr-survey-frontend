@@ -55,69 +55,6 @@ fetch(
 
 
 
-let btn = document.getElementById("get-by-uuid");
-// On click event
-// console.log(btn)
-btn.addEventListener("click", get_by_uuid);
-
-function get_by_uuid() {
-
-    div = document.querySelector("#get-by-uuid")
-    div.style.display = "none";
-    // div.remove()
-
-    header_buttons = document.querySelector(".header-buttons");
-    // new_div = document.createElement("div")
-    // new_div.id = "get-by-uuid"
-
-    form = document.createElement("form");
-    form.className = "uuid-form";
-    form.setAttribute("action", "")
-    input = document.createElement("input");
-    button = document.createElement("button");
-    button.innerHTML = "Поиск"
-    form.appendChild(input);
-    form.appendChild(button);
-    header_buttons.appendChild(form);
-
-    // header_buttons.appendChild(new_div)
-    // div.innerHTML = '<form class="uuid-form"><input class="enter-uuid" placeholder="Введите id: " type="text"> <button>Поиск</button></form>';
-    
-}
-
-// Out click event
-uuid_form = document.getElementsByClassName("uuid-form")
-if (uuid_form) {
-    main = document.getElementsByTagName("main")[0];
-    main.addEventListener("click", out_of_uuid);
-
-}
-
-
-
-function out_of_uuid(event) {
-    // event.preventDefault()
-    div = document.querySelector(".uuid-form");
-    div.remove()
-    
-    div = document.querySelector("#get-by-uuid")
-    div.style.display = "block";
-
-
-    // header_buttons = document.querySelector(".header-buttons");
-    // new_div = document.createElement("div")
-    // new_div.id = "get-by-uuid"
-
-    // a = document.createElement("a")
-    // a.className = "go-button";
-    // a.innerHTML = "Пройти"
-    // new_div.appendChild(a);
-    // header_buttons.appendChild(new_div)
-    // btn = document.getElementById("get-by-uuid");
-
-    
-}
-
 
 // Get the button:
 let mybutton = document.getElementById("button-up");
