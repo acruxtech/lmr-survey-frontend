@@ -15,7 +15,6 @@ btn.addEventListener("click", e => {
     input.setAttribute("id", "search-form")
     input.setAttribute("name", "uuid")
     button = document.createElement("button");
-    button = document.setAttribute("id", "button-search");
     button.innerHTML = "Поиск"
 
     button.addEventListener("click", e => {
@@ -27,19 +26,3 @@ btn.addEventListener("click", e => {
     form.appendChild(button);
     header_buttons.appendChild(form);
 });
-
-
-// Out click event
-uuid_form = document.getElementsByClassName("uuid-form")
-if (uuid_form) {
-    main = document.getElementsByTagName("main")[0];
-    main.addEventListener("click", out_of_uuid);
-    function out_of_uuid(event) {
-      event.preventDefault()
-      div = document.querySelector(".uuid-form");
-      div.remove()
-      
-      div = document.querySelector("#get-by-uuid")
-      div.style.display = "block";
-  }
-}
