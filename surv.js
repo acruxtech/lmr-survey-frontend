@@ -90,3 +90,30 @@ function render_question(survey) {
 }
 
 render_question(survey);
+
+let passage_time = survey.time_to_pass*60;
+console.log(passage_time);
+
+
+function timer(){
+    const secondsElement = document.getElementById('seconds');
+
+    // Установить начальные значения
+    let seconds = passage_time;
+
+    // Создать интервал обновления таймера
+    const interval = setInterval(() => {
+    // Уменьшить секунды
+    seconds--;
+
+    // Если секунды достигли 0, отправить форму
+    if (seconds  === 0) {
+
+    }
+
+    // Обновить отображение таймера
+    secondsElement.innerHTML = seconds.toString().padStart(2, 0); // добавить нули к однозначным значениям секунд
+    }, 1000); // обновлять таймер каждую секунду
+}
+
+timer();
