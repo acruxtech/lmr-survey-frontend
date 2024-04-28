@@ -36,7 +36,8 @@ function create_answer_field(button) {
 }
 
 function remove_answer_field(btn){
-    ((btn.parentNode).parentNode).removeChild(btn.parentNode);
+    let parent = btn.parentNode.parentNode;
+    parent.remove()
 }
 
 
@@ -105,23 +106,33 @@ function create_question() {
 let form = document.getElementById("new-survey-form");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-
     title = document.getElementById("title").value;
     topic = document.getElementById("topic").value;
     show_result = document.getElementById("show_result").value;
     question_blocks = document.getElementsByClassName("question");
     let questions = []
+
+    // get answers
     for (let i = 0; i < question_blocks.length; i++) {
         answers_block = question_blocks[i].children[1].children[1]
         answers = []
-        for (let i = 0; i < answers_block.children.length; i++) {
-            answers.push(answers_block.children[i].children[0].value)
+
+        for (let a of answers_block.children) {
+            for (let div of a.children) {
+                let radio = div.children[0];
+                let input = div.children[1];
+                answers.push(input.value)
+                if (radio.checked) {
+                    var correct_answer = input.value;
+                }
+            }
         }
+        
         questions.push({
             "title": question_blocks[i].children[0].children[0].innerText,
             "text": question_blocks[i].children[0].children[1].value,
             "answers": answers,
-            "correct_answer": answers[0],
+            "correct_answer": correct_answer,
         });
     }
 
