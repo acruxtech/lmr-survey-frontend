@@ -8,6 +8,11 @@ h1 {
 }
 
 
+.head_survey{
+    text-align: center;
+    font-family: "Noto Sans";
+}
+
 .back-to-homepage {
     font-family: "Noto Sans";
     font-size: 1.2em;
@@ -78,8 +83,9 @@ main {
 
   }
 
-.button_text{
-}
+  .button_text {
+    display: flex;
+  }
 
 #kek{
     margin-bottom: 20px;
