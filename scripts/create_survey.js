@@ -14,11 +14,13 @@ function create_answer_field(button) {
 
     let radio = document.createElement('input');
     radio.setAttribute("type", "radio")
+    radio.setAttribute("name", "question-" + question_id)
 
     let input = document.createElement('input');
 
     let remove_button = document.createElement("button")
     remove_button.className = "remove-button"
+    remove_button.setAttribute("onclick", "remove_answer_field(this)")
     remove_button.innerHTML = "X"
 
     let li = document.createElement('li');
@@ -28,10 +30,15 @@ function create_answer_field(button) {
     answer_block.appendChild(remove_button)
 
     li.appendChild(answer_block);
-    li.className = 'li_answer';
+    li.className = 'li-answer';
     let ol = document.getElementById("list-answers-" + question_id);
     ol.appendChild(li);
 }
+
+function remove_answer_field(btn){
+    ((btn.parentNode).parentNode).removeChild(btn.parentNode);
+}
+
 
 
 function create_question() {
@@ -62,8 +69,20 @@ function create_question() {
 
     let ol_li = document.createElement('li');
     ol_li.className = "li-answer"
+
+    let answer_block = document.createElement("div")
+    answer_block.className = "answer-block";
+
+    let radio = document.createElement('input');
+    radio.setAttribute("type", "radio")
+    radio.setAttribute("name", "question-" + number)
+
     let ol_li_input = document.createElement('input');
-    ol_li.appendChild(ol_li_input);
+
+    answer_block.appendChild(radio)
+    answer_block.appendChild(ol_li_input)
+
+    ol_li.appendChild(answer_block);
     ol.appendChild(ol_li);
     div2.appendChild(span2)
     div2.appendChild(ol)
