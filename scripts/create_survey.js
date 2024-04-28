@@ -121,7 +121,7 @@ form.addEventListener("submit", (e) => {
             "title": question_blocks[i].children[0].children[0].innerText,
             "text": question_blocks[i].children[0].children[1].value,
             "answers": answers,
-            "correct_answers": answers,
+            "correct_answer": answers[0],
         });
     }
 

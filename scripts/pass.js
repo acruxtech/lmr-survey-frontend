@@ -79,7 +79,6 @@ function render_question(survey) {
 
 
 
-
 render_question(survey);
 // let passage_time = survey.time_to_pass*60;
 // console.log(passage_time);
