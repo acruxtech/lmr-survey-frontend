@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "variables.css";
 
+*{
+    font-family: "Noto Sans";
+}
 
 h1 {
     font-size: 50px;
@@ -10,18 +13,17 @@ h1 {
 
 .head_survey{
     text-align: center;
-    font-family: "Noto Sans";
+
 }
 
 .back-to-homepage {
-    font-family: "Noto Sans";
+
     font-size: 1.2em;
 
 }
 
 
 .new-survey {
-    font-family: "Nano Sans";
     border: 2px solid #333; 
     border-radius: 10px; 
     padding: 20px; 
@@ -58,13 +60,13 @@ main {
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
-    font-family: "Noto Sans";
+
 }
 
 .list_task{
     justify-content: space-between;
     gap: 10%;
-    font-family: "Noto Sans";
+
 }
 
 .text_answ_p{

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "variables.css";
 
+*{
+    font-family: "Noto Sans";
+}
+
 
 main {
     flex-direction: row;
@@ -22,7 +26,7 @@ main {
 
 
 .new-survey {
-    font-family: "Nano Sans";
+    font-family: "Noto Sans";
     border: 2px solid var(--background-dark); 
     border-radius: 10px; 
     padding: 20px;
