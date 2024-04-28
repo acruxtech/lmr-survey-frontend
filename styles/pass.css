@@ -102,7 +102,7 @@ main {
     margin-bottom: 11px;
 }
 
-.button{
+.button.save{
     margin-left: -0.01px;
     padding: 0;
     height: 30px;
