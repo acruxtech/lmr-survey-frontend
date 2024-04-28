@@ -39,7 +39,7 @@ select {
     justify-content: space-between;
     align-items: left;
     padding: 25px;
-    width: 18vw;
+    width: 23%;
     height: 400px;
     text-align: left;
     background: var(--background-dark);

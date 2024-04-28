@@ -7,23 +7,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/pass_survey.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/pass.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="assets/icon.png" alt="">
-            <p>lmr-survey</p>
-        </div>
-
+        <a href="index.html">
+            <div class="logo">
+                <img src="assets/icon.png" alt="">
+                <p>lmr-survey</p>
+            </div>
+        </a>
         <div class="header-buttons">
+            <a href="create.html">
+                <button class="button white">Создать опрос</button>
+            </a>
             <div id="get-by-uuid">
-                <a class="go-button">Пройти опрос</a>
+                <button class="button">Пройти опрос</button>
             </div>
         </div>
     </header>
+
     <main>
         <box-icon class="icon_right" name='right-arrow-alt' flip='horizontal'></box-icon>
         <div>
@@ -44,9 +50,8 @@
         </div>
 
         <div id="timer">
-            <span id="minutes">Секунд осталось </span>
-            :
-            <span id="seconds">00</span>
+            <span id="minutes">Времени осталось: </span>
+            <!-- <span id="seconds">00</span> -->
           </div>
     </main>
 
@@ -54,6 +59,7 @@
     <footer>
         <p>created by linuxmasterrace team | 2024</p>
     </footer>
-    <script src="surv.js"></script>
+    <script src="scripts/constants.js"></script>
+    <script src="scripts/pass.js"></script>
 </body>
 </html>
