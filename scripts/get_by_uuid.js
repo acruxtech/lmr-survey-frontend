@@ -19,8 +19,9 @@ function get_by_uuid() {
     input.setAttribute("id", "search-form")
     input.setAttribute("name", "uuid")
     button = document.createElement("button");
+    button = document.setAttribute("id", "button-search");
     button.innerHTML = "Поиск"
-    button.setAttribute("onclick", "get_survey_by_uuid()")
+    // button.setAttribute("onclick", "get_survey_by_uuid()")
     form.appendChild(input);
     form.appendChild(button);
     header_buttons.appendChild(form);
@@ -49,21 +50,24 @@ if (uuid_form) {
 
 // code for fetch GET data and redirect
 
-function get_survey_by_uuid() {
-    window.location.href = 'newPage.html';
-    // let params = new URLSearchParams(location.search);
-    // let uuid = params.get('uuid')
+let button_search = document.getElementById("button-search");
 
-    // // get current URL 
-    // let url = window.location.href.split('/');
-    // url[url.length - 1] = "pass.html?uuid=" + uuid;
-    // url = url.join('/')
-    // console.log(url)
+// On click event
+button_search.addEventListener("click", get_survey_by_uuid);
 
-    // // redirect
-    // // window.location = "file:///D:/lmr-survey-frontend/pass.html?uuid=6f34d13a-a510-4e15-9d9c-705424073f38";
-    // window.location.href = url
-    // console.log(window.location.href)
-    
+function get_survey_by_uuid(event) {
+    event.preventDefault()
+
+    let params = new URLSearchParams(location.search);
+    let uuid = params.get('uuid')
+
+    // get current URL 
+    let url = window.location.href.split('/');
+    url[url.length - 1] = "pass.html?uuid=" + uuid;
+    url = url.join('/')
+    console.log(url)
+
+    // redirect
+    window.location.replace(url);
 }
 
