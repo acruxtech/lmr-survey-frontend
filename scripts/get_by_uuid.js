@@ -15,17 +15,18 @@ btn.addEventListener("click", e => {
     input.setAttribute("id", "search-form")
     input.setAttribute("name", "uuid")
     button = document.createElement("button");
-    button = document.setAttribute("id", "button-search");
     button.innerHTML = "Поиск"
+    form.appendChild(input);
+    form.appendChild(button);
+    header_buttons.appendChild(form);
+
 
     button.addEventListener("click", e => {
         e.preventDefault();
         window.location.href = "pass.html?uuid=" + input.value;
     })
 
-    form.appendChild(input);
-    form.appendChild(button);
-    header_buttons.appendChild(form);
+    
 });
 
 
