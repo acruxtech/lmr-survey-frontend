@@ -72,7 +72,21 @@ form.addEventListener("submit", (e) => {
     title = document.getElementById("title").value;
     topic = document.getElementById("topic").value;
     show_result = document.getElementById("show_result").value;
-    questions = []
+    question_blocks = document.getElementsByClassName("question");
+    let questions = []
+    for (let i = 0; i < question_blocks.length; i++) {
+        answers_block = question_blocks[i].children[1].children[1]
+        answers = []
+        for (let i = 0; i < answers_block.children.length; i++) {
+            answers.push(answers_block.children[i].children[0].value)
+        }
+        questions.push({
+            "title": question_blocks[i].children[0].children[0].innerText,
+            "text": question_blocks[i].children[0].children[1].value,
+            "answers": answers,
+            "correct_answers": answers,
+        });
+    }
 
     new_survey = {
         "title": title,
@@ -80,7 +94,7 @@ form.addEventListener("submit", (e) => {
         "show_result_after_passing": true,
         "questions": questions,
     }
-    console.log(new_survey)
+
     fetch(
         `${root}/create`, {
             method: "POST",
@@ -89,7 +103,7 @@ form.addEventListener("submit", (e) => {
     )
     .then(res => res.json())
     .then(data => {
-        console.log(data)
+        alert(`Опрос успешно создан!\nuuid: ${data["uuid"]}\naccess_hash: ${data["access_hash"]}`)
     })
     .catch(res => console.error(res));
 });
@@ -106,7 +120,6 @@ let btn = document.getElementById("get-by-uuid");
 btn.addEventListener("click", get_by_uuid);
 
 function get_by_uuid() {
-
     div = document.querySelector("#get-by-uuid")
     div.style.display = "none";
     // div.remove()

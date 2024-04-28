@@ -1,36 +1,50 @@
-survey = {
-    "title": "название опроса",
-    "topic": "образование",
-    "is_public": true,
-    "show_result_after_passing": true,
-    "questions": [
-      {
-        "title": "вопрос 1",
-        "text": "Выберите дату начала СВО",
-        "answers": ["01.01", "24.02"],
-        "type": "field"
-      },
-      {
-        "title": "вопрос 2",
-        "text": "Выберите дату начала ВСО",
-        "answers": ["01.01", "24.02"],
-        "type": "field"
-      },
-      {
-        "title": "вопрос 3",
-        "text": "Выберите дату начала СОВ",
-        "answers": ["01.01", "24.02"],
-        "type": "field"
-      }
-    ],
-    "after_passing_text": "красавчик",
-    "passing_score": 100,
-    "time_to_pass": 10
-}
+// survey = {
+//     "title": "название опроса",
+//     "topic": "образование",
+//     "is_public": true,
+//     "show_result_after_passing": true,
+//     "questions": [
+//       {
+//         "title": "вопрос 1",
+//         "text": "Выберите дату начала СВО",
+//         "answers": ["01.01", "24.02"],
+//         "type": "field"
+//       },
+//       {
+//         "title": "вопрос 2",
+//         "text": "Выберите дату начала ВСО",
+//         "answers": ["01.01", "24.02"],
+//         "type": "field"
+//       },
+//       {
+//         "title": "вопрос 3",
+//         "text": "Выберите дату начала СОВ",
+//         "answers": ["01.01", "24.02"],
+//         "type": "field"
+//       }
+//     ],
+//     "after_passing_text": "красавчик",
+//     "passing_score": 100,
+//     "time_to_pass": 10
+// }
+
+
+uuid = "46f249cd-27a8-4363-bb62-25ec0a1fc7ff"
+fetch(
+	`${root}/survey?uuid=${uuid}`, {
+		method: "GET",
+	}
+)
+.then(res => res.json())
+.then(data => {
+	survey = data;
+	render_name_surveys(survey);
+	render_question(survey);
+})
+.catch(res => console.error(res));
 
 
 function render_name_surveys(survey) { // Добавление название опроса в заголовок
-    
     let name_survey = survey["title"];
     
     const text_surveyName = document.createElement('p'); // создание элемента p
@@ -44,13 +58,9 @@ function render_name_surveys(survey) { // Добавление название 
     container.appendChild(text_surveyName); // добавить элемент с названием опроса в new-survey
 }
 
-render_name_surveys(survey);
-
-let count = survey.questions.length;
-console.log(count);
 
 function render_question(survey) {
-    for (let i = 0; i < count; i += 1) {
+    for (let i = 0; i < survey.questions.length; i += 1) {
 
         let number_question = survey.questions[i]["title"];
         let text_q = survey.questions[i]["text"];
@@ -89,31 +99,30 @@ function render_question(survey) {
     }
 }
 
-render_question(survey);
 
-let passage_time = survey.time_to_pass*60;
-console.log(passage_time);
+// let passage_time = survey.time_to_pass*60;
+// console.log(passage_time);
 
 
-function timer(){
-    const secondsElement = document.getElementById('seconds');
+// function timer(){
+//     const secondsElement = document.getElementById('seconds');
 
-    // Установить начальные значения
-    let seconds = passage_time;
+//     // Установить начальные значения
+//     let seconds = passage_time;
 
-    // Создать интервал обновления таймера
-    const interval = setInterval(() => {
-    // Уменьшить секунды
-    seconds--;
+//     // Создать интервал обновления таймера
+//     const interval = setInterval(() => {
+//     // Уменьшить секунды
+//     seconds--;
 
-    // Если секунды достигли 0, отправить форму
-    if (seconds  === 0) {
+//     // Если секунды достигли 0, отправить форму
+//     if (seconds  === 0) {
 
-    }
+//     }
 
-    // Обновить отображение таймера
-    secondsElement.innerHTML = seconds.toString().padStart(2, 0); // добавить нули к однозначным значениям секунд
-    }, 1000); // обновлять таймер каждую секунду
-}
+//     // Обновить отображение таймера
+//     secondsElement.innerHTML = seconds.toString().padStart(2, 0); // добавить нули к однозначным значениям секунд
+//     }, 1000); // обновлять таймер каждую секунду
+// }
 
-timer();
+// timer();

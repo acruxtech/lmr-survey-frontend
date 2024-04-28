@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "variables.css";
+
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+
+.back-to-homepage {
+    font-family: "Noto Sans";
+    font-size: 1.2em;
+
+}
+
+
+.new-survey {
+    font-family: "Nano Sans";
+    border: 2px solid #333; /* Цвет и толщина рамки */
+    border-radius: 10px; /* Радиус скругления углов */
+    padding: 20px; /* Внутренний отступ */
+    background-color: #f9f9f9; /* Цвет фона */
+    max-width: 600px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование по горизонтали */
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    /* margin-top: 160px; */
+    padding: 10%;
+    width: 100%;
+    background-color: var(--background);
+}
+
+
+.icon_right{
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -2px;
+}
+
+.back-to-homepage:hover{
+    text-decoration: underline;
+}
+
+.survey_name_p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Noto Sans";
+}
+
+.list_task{
+    justify-content: space-between;
+    gap: 10%;
+    font-family: "Noto Sans";
+}
+
+.text_answ_p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.text_question_p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+
+  }
