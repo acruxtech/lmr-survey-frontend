@@ -28,19 +28,3 @@ btn.addEventListener("click", e => {
 
     
 });
-
-
-// Out click event
-uuid_form = document.getElementsByClassName("uuid-form")
-if (uuid_form) {
-    main = document.getElementsByTagName("main")[0];
-    main.addEventListener("click", out_of_uuid);
-    function out_of_uuid(event) {
-      event.preventDefault()
-      div = document.querySelector(".uuid-form");
-      div.remove()
-      
-      div = document.querySelector("#get-by-uuid")
-      div.style.display = "block";
-  }
-}

@@ -61,8 +61,9 @@ function render_question(survey) {
             text_answ.classList.add('text_answ_p');
           
             const button = document.createElement('input');
-            button.type = "radio";
-          
+            button.type = 'radio';
+            button.name = 'ans'+i;
+
             const div = document.createElement('div'); // тут будет radio кнопка и вариант ответа
           
             div.appendChild(button);
