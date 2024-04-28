@@ -101,3 +101,10 @@ main {
 .text_question_p{
     margin-bottom: 11px;
 }
+
+.button{
+    margin-left: -0.01px;
+    padding: 0;
+    height: 30px;
+    width: 130px;
+}
